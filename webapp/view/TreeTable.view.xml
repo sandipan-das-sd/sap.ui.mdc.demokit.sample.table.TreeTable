@@ -16,6 +16,8 @@
 			p13nMode="Column,Sort,Filter"
 				type="TreeTable"
 				useColumnLabelsAsTooltips="true"
+				width="100%"
+				rowActionCount="1"
 				delegate="{
 					name: 'mdc/sample/delegates/JSONTreeTableDelegate',
 					payload: {
@@ -24,23 +26,34 @@
 				}">
 			<mdct:Column
 				propertyKey="name"
-				header="error name">
-				<Text text="{clothing>name}"/>
+				header="Error Name"
+				width="25%">
+				<Text text="{clothing>name}" wrapping="true"/>
 			</mdct:Column>
 			<mdct:Column
 				propertyKey="datetime"
-				header="date and time">
+				header="Date and Time"
+				width="15%">
 				<Text text="{clothing>datetime}"/>
 			</mdct:Column>
 			<mdct:Column
 				propertyKey="reprocess"
-				header="reprocess yes/no">
-				<Text text="{clothing>reprocess}"/>
+				header="Reprocess"
+				width="15%"
+				hAlign="Center">
+				<HBox justifyContent="Center" alignItems="Center" visible="{= ${clothing>datetime} !== '' &amp;&amp; ${clothing>datetime} !== undefined }">
+					<Button text="Yes" type="Accept" press=".onReprocessYes" class="sapUiTinyMarginEnd"/>
+					<Button text="No" type="Reject" press=".onReprocessNo"/>
+				</HBox>
 			</mdct:Column>
 			<mdct:Column
 				propertyKey="payload"
-				header="xml/payload before reprocess">
-				<Text text="{clothing>payload}"/>
+				header="XML/Payload Before Reprocess"
+				width="45%">
+				<VBox visible="{= ${clothing>payload} !== '' &amp;&amp; ${clothing>payload} !== undefined }">
+					<Text text="{clothing>payload}" wrapping="true" class="sapUiSmallMarginBottom"/>
+					<Link text="View Full Payload" press=".onViewPayload"/>
+				</VBox>
 			</mdct:Column>
 		</mdc:Table>
 		</f:content>

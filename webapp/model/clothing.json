@@ -2,11 +2,11 @@
 	"catalog": {
 	  "clothing": {
 		"categories": [
-		  {"name": "data issue", "categories": [
-			{"name": "special character is present please remove special character", "datetime": "2025-11-19 10:30:45", "reprocess": "yes/no", "payload": "<?xml version='1.0'?><root><data>Special char @ found in field</data><errorCode>DATA_001</errorCode></root>"},
-			{"name": "alpha numerical is present please remove special character", "datetime": "2025-11-19 11:15:22", "reprocess": "yes/no", "payload": "<?xml version='1.0'?><root><data>Invalid alphanumeric sequence ABC123#</data><errorCode>DATA_002</errorCode></root>"}
+		  {"name": "Data issue", "categories": [
+			{"name": "Special character is present please remove special character", "datetime": "2025-11-19 10:30:45", "reprocess": "yes/no", "payload": "<?xml version='1.0'?><root><data>Special char @ found in field</data><errorCode>DATA_001</errorCode></root>"},
+			{"name": "Alpha numerical is present please remove special character", "datetime": "2025-11-19 11:15:22", "reprocess": "yes/no", "payload": "<?xml version='1.0'?><root><data>Invalid alphanumeric sequence ABC123#</data><errorCode>DATA_002</errorCode></root>"}
 		  ]},
-		  {"name": "server issue", "categories": [
+		  {"name": "Server issue", "categories": [
 			{"name": "404 server not available", "datetime": "2025-11-19 09:20:10", "reprocess": "yes/no", "payload": "<?xml version='1.0'?><root><error>Server endpoint not responding</error><statusCode>404</statusCode><url>https://api.example.com/data</url></root>"},
 			{"name": "Server patch update", "datetime": "2025-11-19 14:05:33", "reprocess": "yes/no", "payload": "<?xml version='1.0'?><root><message>Server maintenance in progress</message><version>2.3.1</version></root>"}
 		  ]}

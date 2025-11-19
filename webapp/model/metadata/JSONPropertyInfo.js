@@ -3,28 +3,24 @@ sap.ui.define([
 	"use strict";
 	const aPropertyInfos = [{
 		key: "name",
-		label: "Name",
+		label: "Error Name",
 		path: "name",
 		dataType: "sap.ui.model.type.String"
 	},{
-		key: "amount",
-		label: "Amount",
-		path: "amount",
-		dataType: "sap.ui.model.type.Float"
-	},{
-		key: "currency",
-		label: "Currency",
-		path: "currency",
+		key: "datetime",
+		label: "Date and Time",
+		path: "datetime",
 		dataType: "sap.ui.model.type.String"
 	},{
-		key: "size",
-		label: "Size",
-		path: "size",
+		key: "reprocess",
+		label: "Reprocess",
+		path: "reprocess",
 		dataType: "sap.ui.model.type.String"
 	},{
-		key: "price",
-		label: "Price",
-		propertyInfos: ["amount", "currency"]
+		key: "payload",
+		label: "XML/Payload Before Reprocess",
+		path: "payload",
+		dataType: "sap.ui.model.type.String"
 	}];
 
 	return aPropertyInfos;

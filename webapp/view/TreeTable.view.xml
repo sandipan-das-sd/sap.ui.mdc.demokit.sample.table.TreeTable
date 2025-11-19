@@ -12,12 +12,12 @@
 		<f:content>
 		<mdc:Table
 			id="table"
-			header="Clothing-custom cpi error"
+			header="Custom CPI Error"
+			showRowCount="false"
 			p13nMode="Column,Sort,Filter"
 				type="TreeTable"
 				useColumnLabelsAsTooltips="true"
 				width="100%"
-				rowActionCount="1"
 				delegate="{
 					name: 'mdc/sample/delegates/JSONTreeTableDelegate',
 					payload: {

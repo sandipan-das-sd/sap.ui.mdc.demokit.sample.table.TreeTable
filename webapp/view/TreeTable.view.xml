@@ -1,0 +1,49 @@
+<mvc:View
+	height="100%"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:f="sap.f"
+	xmlns:core="sap.ui.core"
+	xmlns:mdc="sap.ui.mdc"
+	xmlns:mdct="sap.ui.mdc.table">
+
+	<f:DynamicPage id="page">
+		<f:content>
+		<mdc:Table
+			id="table"
+			header="Clothing-custom cpi error"
+			p13nMode="Column,Sort,Filter"
+				type="TreeTable"
+				useColumnLabelsAsTooltips="true"
+				delegate="{
+					name: 'mdc/sample/delegates/JSONTreeTableDelegate',
+					payload: {
+						bindingPath: 'clothing>/catalog/clothing'
+					}
+				}">
+			<mdct:Column
+				propertyKey="name"
+				header="error name">
+				<Text text="{clothing>name}"/>
+			</mdct:Column>
+			<mdct:Column
+				propertyKey="datetime"
+				header="date and time">
+				<Text text="{clothing>datetime}"/>
+			</mdct:Column>
+			<mdct:Column
+				propertyKey="reprocess"
+				header="reprocess yes/no">
+				<Text text="{clothing>reprocess}"/>
+			</mdct:Column>
+			<mdct:Column
+				propertyKey="payload"
+				header="xml/payload before reprocess">
+				<Text text="{clothing>payload}"/>
+			</mdct:Column>
+		</mdc:Table>
+		</f:content>
+	</f:DynamicPage>
+
+</mvc:View>

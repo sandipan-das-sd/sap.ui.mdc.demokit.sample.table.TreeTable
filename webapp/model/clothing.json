@@ -1,0 +1,24 @@
+{
+	"catalog": {
+	  "clothing": {
+		"categories": [
+		  {"name": "data issue", "categories": [
+			{"name": "special character is present please remove special character", "datetime": "", "reprocess": "yes/no", "payload": ""},
+			{"name": "alpha numerical is present please remove special character", "datetime": "", "reprocess": "yes/no", "payload": ""}
+		  ]},
+		  {"name": "server issue", "categories": [
+			{"name": "404 server not available", "datetime": "", "reprocess": "yes/no", "payload": ""},
+			{"name": "Server patch update", "datetime": "", "reprocess": "yes/no", "payload": ""}
+		  ]}
+			
+			
+		  ]}
+  
+	  },
+	"sizes": [
+	  {"key": "XS", "value": "Extra Small"},
+	  {"key": "S", "value": "Small"},
+	  {"key": "M", "value": "Medium"},
+	  {"key": "L", "value": "Large"}
+	]
+	}
